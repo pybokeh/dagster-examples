@@ -31,7 +31,7 @@ def text_classify():
 
 
 @repository
-def tv_repo():
+def examples_repo():
     return [
         text_classify,
     ]
