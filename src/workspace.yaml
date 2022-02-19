@@ -1,0 +1,4 @@
+load_from:
+  - python_file:
+      relative_path: repositories/example_repo.py
+      executable_path: /home/pybokeh/envs/dagster_dev/bin/python
