@@ -10,10 +10,10 @@ import sklearn
 
 
 @op(
-    description="Fetch branded-to-nonbranded features training data",
+    description="Fetch free-hand text to generic features training or test data",
     out={
         "df": Out(
-            description="pandas dataframe containing branded features to non-branded features training or test data",
+            description="pandas dataframe containing training or test data",
             dagster_type=pd.DataFrame,
         )
     },
@@ -21,7 +21,7 @@ import sklearn
         "full_path": String
     }
 )
-def fetch_branded_nonbranded_training_or_test_data(context) -> pd.DataFrame:
+def fetch_freehand_text_to_generic_data(context) -> pd.DataFrame:
     df = pd.read_csv(context.op_config["full_path"])
 
     context.log.info(f"Number of (rows, columns): {df.shape}")
